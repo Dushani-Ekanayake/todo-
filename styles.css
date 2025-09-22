@@ -1,0 +1,270 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
+    --danger-color: #cf6679;
+    --success-color: #03dac6;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Theme Variables */
+body.light-theme {
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --accent-color: #6200ee;
+    --danger-color: #b00020;
+    --success-color: #018786;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .todo-container {
+        grid-column: span 2;
+    }
+}
+
+.todo-container, .stopwatch-container, .history-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.history-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#clear-history {
+    background-color: var(--danger-color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+#clear-history:hover {
+    background-color: #b00020;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: var(--accent-color);
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-color);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    font-size: 1rem;
+}
+
+#todo-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+#add-button {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    transition: background-color 0.3s;
+}
+
+#add-button:hover {
+    background-color: #9d70d8;
+}
+
+#todo-list, #history-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.todo-item .checkbox {
+    margin-right: 15px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.todo-item .checkbox.checked {
+    color: var(--success-color);
+}
+
+.todo-item .todo-text {
+    flex: 1;
+}
+
+.todo-item .delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.todo-item .delete-btn:hover {
+    opacity: 1;
+}
+
+.history-item {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.history-item .timestamp {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.stopwatch-container {
+    text-align: center;
+}
+
+.stopwatch-display {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 20px 0;
+    font-family: monospace;
+}
+
+.stopwatch-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.stopwatch-controls button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#start-stopwatch {
+    background-color: var(--success-color);
+    color: #000;
+}
+
+#pause-stopwatch {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+#reset-stopwatch {
+    background-color: var(--danger-color);
+    color: #fff;
+}
+
+.stopwatch-controls button:hover {
+    transform: scale(1.05);
+}
+
+.stopwatch-controls button:active {
+    transform: scale(0.95);
+}
+
+/* Empty state styles */
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}

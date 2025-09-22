@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo App</h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <div class="app-container">
+            <div class="todo-container">
+                <div class="input-section">
+                    <input type="text" id="todo-input" placeholder="Add a new task...">
+                    <button id="add-button"><i class="fas fa-plus"></i></button>
+                </div>
+                
+                <div class="todo-list-container">
+                    <h2>Tasks</h2>
+                    <ul id="todo-list"></ul>
+                </div>
+            </div>
+
+            <div class="stopwatch-container">
+                <h2>Stopwatch</h2>
+                <div class="stopwatch-display">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+                <div class="stopwatch-controls">
+                    <button id="start-stopwatch"><i class="fas fa-play"></i></button>
+                    <button id="pause-stopwatch"><i class="fas fa-pause"></i></button>
+                    <button id="reset-stopwatch"><i class="fas fa-redo"></i></button>
+                </div>
+            </div>
+
+
+            <div class="history-container">
+                <h2>History</h2>
+                <div class="history-header">
+                    <button id="clear-history"><i class="fas fa-trash"></i> Clear History</button>
+                </div>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
