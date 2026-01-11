@@ -25,4 +25,7 @@ This app helps you organize tasks efficiently while also keeping track of your p
 Frontend: HTML, CSS, JavaScript
 
 Screenshots 
+<img width="1208" height="738" alt="image" src="https://github.com/user-attachments/assets/fdc80b9c-8eb2-4d23-9d00-ce5a78e389ce" />
+
+<img width="1258" height="759" alt="image" src="https://github.com/user-attachments/assets/5724c0e1-da55-4aab-b086-92779f3bfd8c" />
 
