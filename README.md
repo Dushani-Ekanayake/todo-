@@ -1,5 +1,5 @@
 # todo
-📝 To-Do App with Stopwatch & Theme Switcher
+📝 To-Do App with Stopwatch & Theme Switcher : https://dushani-ekanayake.github.io/todo-/ (live project)
 
 A simple yet powerful To-Do application built using HTML, CSS, and JavaScript.
 This app helps you organize tasks efficiently while also keeping track of your productivity with a built-in stopwatch.
@@ -23,3 +23,6 @@ This app helps you organize tasks efficiently while also keeping track of your p
 ⚙️ Tech Stack
 
 Frontend: HTML, CSS, JavaScript
+
+Screenshots 
+
